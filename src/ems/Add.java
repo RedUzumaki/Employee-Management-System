@@ -53,6 +53,7 @@ public class Add extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jConfirmBtn = new javax.swing.JButton();
         refreshActionBtn = new javax.swing.JButton();
+        jLeaveBtn = new javax.swing.JToggleButton();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         BackgroundImage = new javax.swing.JLabel();
 
@@ -72,7 +73,7 @@ public class Add extends javax.swing.JFrame {
                 jUpdateBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(jUpdateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 240, 60));
+        jPanel1.add(jUpdateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 240, 60));
 
         jAddBtn.setBackground(new java.awt.Color(255, 255, 255));
         jAddBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -88,7 +89,7 @@ public class Add extends javax.swing.JFrame {
                 jAddBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(jAddBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 240, 60));
+        jPanel1.add(jAddBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 240, 60));
 
         jDeleteBtn.setBackground(new java.awt.Color(255, 255, 255));
         jDeleteBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -101,7 +102,7 @@ public class Add extends javax.swing.JFrame {
                 jDeleteBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(jDeleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 240, 60));
+        jPanel1.add(jDeleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 240, 60));
 
         jShowBtn.setBackground(new java.awt.Color(255, 255, 255));
         jShowBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -114,7 +115,7 @@ public class Add extends javax.swing.JFrame {
                 jShowBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(jShowBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 240, 60));
+        jPanel1.add(jShowBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 240, 60));
 
         jLogoutBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLogoutBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ems/logout_2.png"))); // NOI18N
@@ -125,7 +126,7 @@ public class Add extends javax.swing.JFrame {
                 jLogoutBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(jLogoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 200, 40));
+        jPanel1.add(jLogoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 200, 40));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Last Name");
@@ -242,6 +243,19 @@ public class Add extends javax.swing.JFrame {
             }
         });
         jPanel1.add(refreshActionBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 510, 130, 40));
+
+        jLeaveBtn.setBackground(new java.awt.Color(255, 255, 255));
+        jLeaveBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLeaveBtn.setSelected(true);
+        jLeaveBtn.setText("Leave Management");
+        jLeaveBtn.setBorder(null);
+        jLeaveBtn.setFocusPainted(false);
+        jLeaveBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jLeaveBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jLeaveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 240, 60));
 
         filler1.setBackground(new java.awt.Color(255, 255, 255));
         filler1.setOpaque(true);
@@ -361,6 +375,13 @@ public class Add extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_refreshActionBtnActionPerformed
 
+    private void jLeaveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLeaveBtnActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        Leave lv = new Leave();
+        lv.show();
+    }//GEN-LAST:event_jLeaveBtnActionPerformed
+
     public static void main(String args[]) {}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -379,6 +400,7 @@ public class Add extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JToggleButton jLeaveBtn;
     private javax.swing.JButton jLogoutBtn;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToggleButton jShowBtn;

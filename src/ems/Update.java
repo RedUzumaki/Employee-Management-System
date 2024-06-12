@@ -69,9 +69,6 @@ public class Update extends javax.swing.JFrame {
         genderGrp = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jUpdateBtn = new javax.swing.JToggleButton();
-        jAddBtn = new javax.swing.JToggleButton();
-        jDeleteBtn = new javax.swing.JToggleButton();
-        jShowBtn = new javax.swing.JToggleButton();
         searchEmpTable = new javax.swing.JScrollPane();
         jEmpInfoTable = new javax.swing.JTable();
         updateActionBtn = new javax.swing.JButton();
@@ -92,8 +89,12 @@ public class Update extends javax.swing.JFrame {
         rbFemale = new javax.swing.JRadioButton();
         rbOthers = new javax.swing.JRadioButton();
         refreshActionBtn = new javax.swing.JButton();
-        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
+        jAddBtn = new javax.swing.JToggleButton();
+        jDeleteBtn = new javax.swing.JToggleButton();
+        jShowBtn = new javax.swing.JToggleButton();
+        jLeaveBtn = new javax.swing.JToggleButton();
         jLogoutBtn = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         BackgroundImage = new javax.swing.JLabel();
@@ -113,46 +114,7 @@ public class Update extends javax.swing.JFrame {
                 jUpdateBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(jUpdateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 240, 60));
-
-        jAddBtn.setBackground(new java.awt.Color(255, 255, 255));
-        jAddBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jAddBtn.setSelected(true);
-        jAddBtn.setText("Add Employee");
-        jAddBtn.setBorder(null);
-        jAddBtn.setFocusPainted(false);
-        jAddBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jAddBtnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jAddBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 240, 60));
-
-        jDeleteBtn.setBackground(new java.awt.Color(255, 255, 255));
-        jDeleteBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jDeleteBtn.setSelected(true);
-        jDeleteBtn.setText("Delete Employee");
-        jDeleteBtn.setBorder(null);
-        jDeleteBtn.setFocusPainted(false);
-        jDeleteBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jDeleteBtnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jDeleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 240, 60));
-
-        jShowBtn.setBackground(new java.awt.Color(255, 255, 255));
-        jShowBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jShowBtn.setSelected(true);
-        jShowBtn.setText("Show Employee");
-        jShowBtn.setBorder(null);
-        jShowBtn.setFocusPainted(false);
-        jShowBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jShowBtnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jShowBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 240, 60));
+        jPanel1.add(jUpdateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 240, 60));
 
         searchEmpTable.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -294,9 +256,57 @@ public class Update extends javax.swing.JFrame {
         });
         jPanel1.add(refreshActionBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 530, 130, 40));
 
-        filler1.setBackground(new java.awt.Color(255, 255, 255));
-        filler1.setOpaque(true);
-        jPanel1.add(filler1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 960, 600));
+        jAddBtn.setBackground(new java.awt.Color(255, 255, 255));
+        jAddBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jAddBtn.setSelected(true);
+        jAddBtn.setText("Add Employee");
+        jAddBtn.setBorder(null);
+        jAddBtn.setFocusPainted(false);
+        jAddBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jAddBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jAddBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 240, 60));
+
+        jDeleteBtn.setBackground(new java.awt.Color(255, 255, 255));
+        jDeleteBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jDeleteBtn.setSelected(true);
+        jDeleteBtn.setText("Delete Employee");
+        jDeleteBtn.setBorder(null);
+        jDeleteBtn.setFocusPainted(false);
+        jDeleteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jDeleteBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jDeleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 240, 60));
+
+        jShowBtn.setBackground(new java.awt.Color(255, 255, 255));
+        jShowBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jShowBtn.setSelected(true);
+        jShowBtn.setText("Show Employee");
+        jShowBtn.setBorder(null);
+        jShowBtn.setFocusPainted(false);
+        jShowBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jShowBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jShowBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 240, 60));
+
+        jLeaveBtn.setBackground(new java.awt.Color(255, 255, 255));
+        jLeaveBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLeaveBtn.setSelected(true);
+        jLeaveBtn.setText("Leave Management");
+        jLeaveBtn.setBorder(null);
+        jLeaveBtn.setFocusPainted(false);
+        jLeaveBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jLeaveBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jLeaveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 240, 60));
 
         jLogoutBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLogoutBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ems/logout_2.png"))); // NOI18N
@@ -307,7 +317,11 @@ public class Update extends javax.swing.JFrame {
                 jLogoutBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(jLogoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 200, 40));
+        jPanel1.add(jLogoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 200, 40));
+
+        filler1.setBackground(new java.awt.Color(255, 255, 255));
+        filler1.setOpaque(true);
+        jPanel1.add(filler1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 960, 600));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ems/SplashScreen/Assets/profile1.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, -1));
@@ -341,44 +355,10 @@ public class Update extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jAddBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAddBtnActionPerformed
-        try {
-            // TODO add your handling code here:
-            dispose();
-            Add add = new Add();
-            add.show();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Update.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(Update.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jAddBtnActionPerformed
-
-    private void jDeleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jDeleteBtnActionPerformed
-        // TODO add your handling code here:
-        dispose();
-        Delete dlt = new Delete();
-        dlt.show();
-    }//GEN-LAST:event_jDeleteBtnActionPerformed
-
-    private void jShowBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jShowBtnActionPerformed
-        // TODO add your handling code here:
-        dispose();
-        Show sh = new Show();
-        sh.show();
-    }//GEN-LAST:event_jShowBtnActionPerformed
-
     private void jUpdateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUpdateBtnActionPerformed
         // TODO add your handling code here:
         jUpdateBtn.setEnabled(false);
     }//GEN-LAST:event_jUpdateBtnActionPerformed
-
-    private void jLogoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLogoutBtnActionPerformed
-        // TODO add your handling code here:
-        dispose();
-        LoginJframe lgJframe = new LoginJframe();
-        lgJframe.show();
-    }//GEN-LAST:event_jLogoutBtnActionPerformed
 
     private void txtDesignationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDesignationActionPerformed
         // TODO add your handling code here:
@@ -474,6 +454,45 @@ public class Update extends javax.swing.JFrame {
         up.show();
     }//GEN-LAST:event_refreshActionBtnActionPerformed
 
+    private void jAddBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAddBtnActionPerformed
+        try {
+            // TODO add your handling code here:
+            dispose();
+            Add add = new Add();
+            add.show();
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(Delete.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jAddBtnActionPerformed
+
+    private void jShowBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jShowBtnActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        Show sh = new Show();
+        sh.show();
+    }//GEN-LAST:event_jShowBtnActionPerformed
+
+    private void jLeaveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLeaveBtnActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        Leave lv = new Leave();
+        lv.show();
+    }//GEN-LAST:event_jLeaveBtnActionPerformed
+
+    private void jLogoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLogoutBtnActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        LoginJframe lgJframe = new LoginJframe();
+        lgJframe.show();
+    }//GEN-LAST:event_jLogoutBtnActionPerformed
+
+    private void jDeleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jDeleteBtnActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        Delete dlt = new Delete();
+        dlt.show();
+    }//GEN-LAST:event_jDeleteBtnActionPerformed
+
     public static void main(String args[]) {}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -492,6 +511,7 @@ public class Update extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JToggleButton jLeaveBtn;
     private javax.swing.JButton jLogoutBtn;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToggleButton jShowBtn;
